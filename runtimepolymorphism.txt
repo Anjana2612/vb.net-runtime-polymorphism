@@ -1,0 +1,25 @@
+Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim a As New A
+        a.mul()
+
+    End Sub
+End Class
+Public Class sample
+    Public a, b, c As Integer
+    Public Overridable Sub mul()
+        a = 12
+        b = 12
+        c = a * b
+        MessageBox.Show("The product is :" & c)
+    End Sub
+End Class
+Public Class A
+    Inherits sample
+    Public Overrides Sub mul()
+        a = 22
+        b = 22
+        c = a * b
+        MessageBox.Show("The product is :" & c)
+    End Sub
+End Class
